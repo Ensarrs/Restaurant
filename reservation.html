@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/26e97bbe8d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicion.png">
+    <title>Restaurant</title>
+</head>
+<body>
+    <!--Header-->
+    <nav class="border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"><img src="images/favicion.png" alt="logo" class="logo">Restaurant</span>
+        </a>
+        <button data-collapse-toggle="navbar-solid-bg" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-solid-bg" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
+          <ul class="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
+            <li>
+              <a href="index.html" class="block py-2 px-3 md:p-0  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" aria-current="page">Home</a>
+            </li>
+            <li>
+              <a href="menu.html" class="block py-2 px-3 md:p-0  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Menu</a>
+            </li>
+            <li>
+              <a href="reservation.html" class="block py-2 px-3 md:p-0  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Reservation</a>
+            </li>
+            <li>
+              <a href="contact.html" class="block py-2 px-3 md:p-0  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+      <!--Main-->
+      <div class="container">
+        <form action="tables.html" method="GET">
+            <h1>Here you can make the reservation</h1>
+            <div class="grid gap-6 mb-6 md:grid-cols-2">
+                <div>
+                    <label for="name" class="block mb-2 text-sm font-medium text-white">Name</label>
+                    <input type="text" id="name" class="input-field" required />
+                </div>
+                <div>
+                    <label for="email" class="block mb-2 text-sm font-medium text-white">Email</label>
+                    <input type="email" id="email" class="input-field" required />
+                </div>
+                <div>
+                    <label for="contact_number" class="block mb-2 text-sm font-medium text-white">Contact Number</label>
+                    <input type="tel" id="contact_number" class="input-field" required />
+                </div>
+                <div>
+                    <label for="date" class="block mb-2 text-sm font-medium text-white">Date</label>
+                    <input type="date" id="date" class="input-field" required />
+                </div>
+                <div>
+                    <label for="time" class="block mb-2 text-sm font-medium text-white">Time</label>
+                    <input type="time" id="time" class="input-field" required />
+                </div>
+                <div>
+                    <label for="guests" class="block mb-2 text-sm font-medium text-white">Number of Guests</label>
+                    <input type="number" id="guests" class="input-field" min="1" required />
+                </div>
+                <div>
+                    <label for="table_number"  class="block mb-2 text-sm font-medium text-white table-edit">Table Number</label>
+                    <select id="table_number" class="input-field select-field">
+                        <option value="1" disabled>Table 1</option>
+                        <option value="2">Table 2</option>
+                        <option value="3">Table 3</option>
+                        <option value="4">Table 4</option>
+                        <option value="5" disabled>Table 5</option>
+                        <option value="6">Table 6</option>
+                        <option value="7">Table 7</option>
+                        <option value="8">Table 8</option>
+                        <option value="9" disabled>Table 9</option>
+                    </select>
+                    <div>
+                        <a href="tables.html" class="table-button" target="_blank">See the tables</a>
+                    </div>  
+                </div>
+            </div>
+            <div class="mb-6">
+                <label for="special_request" class="block mb-2 text-sm font-medium text-white">Special Request</label>
+                <textarea id="special_request" class="input-field" rows="4"></textarea>
+            </div>
+            <button type="submit" class="submit-button" onclick="showReservationAlert(event)">Submit Reservation</button>
+
+        </form>
+    </div>
+    
+        
+ <!--Footer-->
+ <footer class="rounded-lg shadow dark:bg-gray-900 m-4">
+  <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+    <div class="sm:flex sm:items-center sm:justify-between">
+      <p><i class="fa-solid fa-location-dot"></i> RR Avdi Kelmendi, Lipjan 14000</p>
+      <p><i class="fa-solid fa-phone"></i> +383 ## ### ###</p>
+      <p><i class="fas fa-envelope icon-email"></i> Restaurant@example.com</p>
+      <p><i class="fa-solid fa-clock"></i> Open: 7:00 AM - 11:00 PM</p>
+      <div class="socialmedia">
+        <a href="https://www.facebook.com/" class="fa fa-facebook" target="_blank" id="socialmedia"></a>
+        <a href="https://x.com/" class="fa fa-twitter" target="_blank" id="socialmedia"></a>
+        <a href="https://www.linkedin.com/" class="fa fa-linkedin" target="_blank" id="socialmedia"></a>
+        <a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank" id="socialmedia"></a>
+      </div>
+    </div>
+    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+    <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="index.html" class="hover:underline">Restaurant</a>. All Rights Reserved.</span>
+  </div>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
